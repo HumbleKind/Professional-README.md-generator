@@ -51,16 +51,14 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then((data) => {
+  inquirer.prompt(questions).then(data => {
     const queryUrl = "https://api.github.com/users/" + data.username;
 
     axios.get(queryUrl).then((response) => {
-      const githubUser = {
+      let githubUser = {
         githubImage: response.data.avatar_url,
         githubEmail: response.data.email,
         githubProfile: response.data.html_url,
@@ -68,7 +66,7 @@ function init() {
       };
       fs.writeToFile(
         "README.md",
-        generateMarkdown(data, githubUser),
+        generateMarkdown(data,githubUser),
         function (err) {
           if (err) {
             throw err;
