@@ -1,4 +1,11 @@
 // TODO: Include packages needed for this application
+let fs = require("fs");
+let inquirer = require("inquirer");
+let generateMarkdown = require("./utils/generateMarkdown");
+let axios = require("axios");
+
+
+
 
 // TODO: Create an array of questions for user input
 const questions = [];
@@ -11,3 +18,5 @@ function init() {}
 
 // Function call to initialize app
 init();
+
+
