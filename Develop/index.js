@@ -56,26 +56,27 @@ function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then(data => {
-        const queryUrl = ("https://api.github.com/users/" + data.username);
+  inquirer.prompt(questions).then((data) => {
+    const queryUrl = "https://api.github.com/users/" + data.username;
 
-        axios.get(queryUrl).then(response => {
-            const githubUser = {                
-                githubImage: response.data.avatar_url,
-                githubEmail: response.data.email,
-                githubProfile: response.data.html_url,
-                githubName: response.data.name,
-            };
-            fs.writeToFile("README.md", generateMarkdown(data, githubUser), function(err) {
-                if (err) {
-                    throw err;
-                };
-            });
-        }); 
+    axios.get(queryUrl).then((response) => {
+      const githubUser = {
+        githubImage: response.data.avatar_url,
+        githubEmail: response.data.email,
+        githubProfile: response.data.html_url,
+        githubName: response.data.name,
+      };
+      fs.writeToFile(
+        "README.md",
+        generateMarkdown(data, githubUser),
+        function (err) {
+          if (err) {
+            throw err;
+          }
+        }
+      );
     });
-    function init() {
-
-    }
+  });
 }
 
 // Function call to initialize app
