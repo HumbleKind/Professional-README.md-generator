@@ -13,16 +13,12 @@ function renderLicenseBadge(license) {
       return badgeEl;
     } else {
       return "";
-    }
-  
-//   }
-//  licenses.append(badgeEl);
-};
-
+    }      
+  };
 renderLicenseBadge();
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+          // TODO: Create a function that returns the license link
+          // If there is no license, return an empty string
 function renderLicenseLink(license) {
   
   let linkEl = license.link
@@ -32,16 +28,13 @@ function renderLicenseLink(license) {
       return linksEL;
     } else {
       return "";
-    }
-  // }
-  // links.append(linksEl);
-};
-
+    }   
+  };
 renderLicenseLink();
 
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+    // TODO: Create a function that returns the license section of README
+    // If there is no license, return an empty string
 function renderLicenseSection(license) {
 
   const $readme = document.querySelector("./README.md/");
@@ -56,32 +49,27 @@ function renderLicenseSection(license) {
     } else {
       return "";
     }
-    
-  // }
-  // sections.append(sectionsEl);
 };
 
 renderLicenseSection();
 
-// TODO: Create a function to generate markdown for README
+      // TODO: Create a function to generate markdown for README
 
 
 function generateMarkdown(data, githubUser) {
-
-
-  return`
+  return `
   # Title: ${data.title}
   # Description: ${data.description}
 
   # Table of Contents: 
-  - [Description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [Licence](#Licence)
-  - [Contributors](#Contributors)
-  - [Test](#Test)
-  - [Repository Link](#Repository)
-  - [GitHub Info](#GitHub)
+    - [Description](#Description)
+    - [Installation](#Installation)
+    - [Usage](#Usage)
+    - [Licence](#Licence)
+    - [Contributors](#Contributors)
+    - [Test](#Test)
+    - [Repository Link](#Repository)
+    - [GitHub Info](#GitHub)
 
   # Installation: ${data.installation}
   # Usage: ${data.usage}
@@ -89,16 +77,16 @@ function generateMarkdown(data, githubUser) {
   # Contributors: ${data.contributors}
   # Testing: ${data.test}
 
-  # GitHub Details:
-  ## GitHub
-![AimeeImage](${githubInfo.githubImage})
-- [Github Name](${githubInfo.name})
-- [GitHub Profile](${githubInfo.profile})
-- <${githubInfo.email}>
+  # GitHub Details: 
+    -[Aimee Image](${githubInfo.githubImage})
+    - [Author Name](${githubInfo.name})
+    - [GitHub Profile](${githubInfo.profile})
+    - [Email](${githubInfo.email})
 
-  `;
-  
-}  
+  #Badges
+  ![badmath](https://img.shields.io/github/repo-size/${data.username}/${data.repository})
 
-
+  `;  
+}
 module.exports = generateMarkdown;
+
