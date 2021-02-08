@@ -66,7 +66,7 @@ renderLicenseSection();
 // TODO: Create a function to generate markdown for README
 
 
-function generateMarkdown(data) {
+function generateMarkdown(data, githubUser) {
 
 
   return`
@@ -88,10 +88,17 @@ function generateMarkdown(data) {
   # License: ${data.license}
   # Contributors: ${data.contributors}
   # Testing: ${data.test}
-  `};
+
+  # GitHub Details:
+  ## GitHub
+![AimeeImage](${githubInfo.githubImage})
+- [Github Name](${githubInfo.name})
+- [GitHub Profile](${githubInfo.profile})
+- <${githubInfo.email}>
+
+  `;
   
-  
+}  
 
 
 module.exports = generateMarkdown;
-
