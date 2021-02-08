@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jinxdoll/Professional-README.md-generator#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "inquirer": "^7.3.3"
   }
 }

@@ -86,8 +86,8 @@ function generateMarkdown(data) {
   # Installation: ${data.installation}
   # Usage: ${data.usage}
   # License: ${data.license}
-  # Contributors: ${data.contributing}
-  # Testing: ${data.tests}
+  # Contributors: ${data.contributors}
+  # Testing: ${data.test}
   `};
   
   
