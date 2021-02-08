@@ -15,9 +15,9 @@ function renderLicenseBadge(license) {
       return "";
     }
   
-  }
- licenses.append(badgeEl);
-}
+//   }
+//  licenses.append(badgeEl);
+};
 
 renderLicenseBadge();
 
@@ -33,9 +33,9 @@ function renderLicenseLink(license) {
     } else {
       return "";
     }
-  }
-  links.append(linksEl);
-}
+  // }
+  // links.append(linksEl);
+};
 
 renderLicenseLink();
 
@@ -57,9 +57,9 @@ function renderLicenseSection(license) {
       return "";
     }
     
-  }
-  sections.append(sectionsEl);
-}
+  // }
+  // sections.append(sectionsEl);
+};
 
 renderLicenseSection();
 
