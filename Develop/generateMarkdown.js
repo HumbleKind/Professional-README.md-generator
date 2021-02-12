@@ -20,7 +20,7 @@ renderLicenseBadge();
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  let linkEl = license.link;
+  let linkEl = licenselinks;
 
   for (let i = 0; i < links.length; i++) {
     if (linksEl === links[i] || !NULL) {

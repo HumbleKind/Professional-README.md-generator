@@ -19,6 +19,8 @@
   "homepage": "https://github.com/jinxdoll/Professional-README.md-generator#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "inquirer": "^7.3.3"
+    "deamon": "^1.0.0",
+    "inquirer": "^7.3.3",
+    "node": "^15.8.0"
   }
 }
