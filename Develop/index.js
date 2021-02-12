@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 let fs = require("fs");
 let inquirer = require("inquirer");
-let generateMarkdown = require("./utils/generateMarkdown");
+let generateMarkdown = require("./generateMarkdown");
 let axios = require("axios");
 
 // TODO: Create an array of questions for user input
