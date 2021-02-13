@@ -54,8 +54,8 @@ const questions = [
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then(data => {
-    const queryUrl = "https://api.github.com/users/" + data.username;
+  inquirer.prompt(questions).then(response => {
+    const queryUrl = "https://api.github.com/users/" + response.username;
 
     axios.get(queryUrl).then((response) => {
       let githubUser = {

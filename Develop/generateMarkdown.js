@@ -53,7 +53,7 @@ renderLicenseSection();
 
 // TODO: Create a function to generate markdown for README
 
-function generateMarkdown(data, githubUser) {
+function generateMarkdown(data,githubUser) {
   return `
   # Title: ${data.title}
   # Description: ${data.description}
