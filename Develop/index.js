@@ -54,23 +54,23 @@ const questions = [
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then(response => {
-    const queryUrl = "https://api.github.com/users/" + response.username;
+  inquirer.prompt(questions)
+  .then(data => {
+    const queryUrl = "https://api.github.com/users/" + data.username;
 
-    axios.get(queryUrl).then((response) => {
+    axios.get(queryUrl)
+    .then (response => {
       let githubUser = {
-        githubImage: response.data.avatar_url,
-        githubEmail: response.data.email,
-        githubProfile: response.data.html_url,
-        githubName: response.data.name,
+        email: response.data.email,
+        profile: response.data.html_url,
+        name: response.data.name,
       };
-      fs.writeToFile(
-        "README.md",
-        generateMarkdown(data,githubUser),
+      fs.writeFile("README.md", generateMarkdown(data,githubUser),
         function (err) {
           if (err) {
             throw err;
-          }
+          };
+          console.log("New README file created with success!");
         }
       );
     });
